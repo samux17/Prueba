@@ -7,12 +7,12 @@ jobs:
   autoyapf:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
         with:
           ref: ${{ github.head_ref }}
       - name: autoyapf
         id: autoyapf
-        uses: Prueba/autoyapf@v2
+        uses: samux17/autoyapf@v2
         with:
           args: --style pep8 --recursive --in-place .
       - name: Check for modified files
